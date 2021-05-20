@@ -82,6 +82,7 @@ class CardContainer extends Component {
     const newPokemon = {
       name: specificPokemon.name,
       stats: this.state.pokemonStat,
+      types: specificPokemon.types,
       hp: specificPokemon.stats[0].base_stat,
       element: specificPokemon.types[0].type.name,
       sprites: {

@@ -11,18 +11,18 @@ class Card extends Component {
     const mappedStats = newStats.map((stat,idx) => <span key={idx}>{stat.base_stat}</span>)
 
     //* Changes card color based on type
-    // const poke_types = types.map(type => type.type.name);
-    // const type = mainTypes.find(type => poke_types.indexOf(type) > -1);
-    // const color = colors[type];
+    const poke_types = types.map(type => type.type.name);
+    const type = mainTypes.find(type => poke_types.indexOf(type) > -1);
+    const color = colors[type] ? colors[type] : colors[element];
 
     const { flip } = this.state
 		const uppercased = name.toUpperCase()
 		return (
-			<div className="pokemon-card" style={{backgroundColor: `${colors.fire}`}}>
+			<div className="pokemon-card" style={{backgroundColor: `${color}`}}>
 				<img onMouseLeave={()=> this.setState({flip: !flip})} onMouseOver={()=> this.setState({flip: !flip})} src={flip ? sprites.back_shiny : sprites.front_shiny } alt="" />
 				<h2>{uppercased}</h2>
 				<p>HP: {mappedStats[0] ? mappedStats[0] : hp}</p>
-        {/* <p>Type: {type ? type : element}</p> */}
+        <p>Type: {type ? type : element}</p>
 			</div>
 		);
 	}
