@@ -47,7 +47,6 @@ class CardContainer extends Component {
           .then(pokeData => pokemonArray.push(pokeData))
       }
 
-    console.log(pokemonArray)
     this.setState({
       pokemonList: pokemonArray
     })
