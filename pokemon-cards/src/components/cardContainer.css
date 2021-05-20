@@ -1,0 +1,49 @@
+.card-container {
+	display: flex;
+	justify-content: center;
+	place-content: space-around;
+	flex-wrap: wrap;
+}
+.pokemon-card {
+	background-size: 200px 20rem;
+	height: 20rem;
+	width: 12.52rem;
+	margin: 1rem;
+	border-radius: 4px;
+}
+.pokemon-card img {
+	margin-top: 4rem;
+}
+
+.pokemon-card button {
+	border-radius: 10px;
+	height: 40px;
+	width: 50%;
+}
+
+.search-field {
+	width: 22rem;
+	height: 1.7rem;
+	border-radius: 11px;
+	padding-left: 1rem;
+	font-size: 0.9rem;
+}
+
+.create-field {
+	height: 1.7rem;
+	width: 11rem;
+	border-radius: 11px;
+	padding-left: 1rem;
+	font-size: 0.9rem;
+	margin-right: 1rem;
+	margin-top: 1rem;
+}
+
+.create-button {
+	margin-top: 1.2rem;
+	height: 1.9rem;
+	width: 5.9rem;
+	border-radius: 45px;
+	background-color: darkblue;
+	color: yellow;
+}
