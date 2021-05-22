@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from "./Card"
 import "./cardContainer.css"
+import _, { debounce } from 'lodash';
 
 class CardContainer extends Component {
   //* Setting state
@@ -51,6 +52,7 @@ class CardContainer extends Component {
       pokemonList: pokemonArray
     })
   }
+
 
   //* This method grabs the input value from the search bar and sets the state of searchCriteria to the value that was grabbed.
   searchCriteria = (e) => {
